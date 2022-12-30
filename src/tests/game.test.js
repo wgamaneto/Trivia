@@ -43,7 +43,7 @@ describe('teste do Game', () => {
     global.fetch = jest.fn().mockResolvedValue({
       json: jest.fn().mockResolvedValue({ response_code: 3 }),
     });
-    renderWithRouterAndRedux(<App />, {}, '/game');
+    renderWithRouterAndRedux(<App />, {}, '/login');
 
     const nameInput = await screen.findByTestId('input-player-name');
     expect(nameInput).toBeInTheDocument();
